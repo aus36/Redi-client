@@ -3,8 +3,14 @@ import './styles/App.css'
 
 function App() {
 
+  // useStates for form information
   const [username, setUsername] = useState<string>('')
   const [password, setPassword] = useState<string>('')
+
+  // handle form submission
+  function submit() {
+    console.log('submit')
+  }
 
 
   return (
@@ -17,10 +23,10 @@ function App() {
       <div className='login-form'>
         <form>
           <label htmlFor='username'>Username</label>
-          <input type='text' id='username' name='username' />
+          <input onChange = {(e) => {setUsername(e.target.value)}} type='text' id='username' name='username' />
           <label htmlFor='password'>Password</label>
-          <input type='password' id='password' name='password' />
-          <button type='submit'>Login</button>
+          <input onChange={(e) => {setPassword(e.target.value)}} type='password' id='password' name='password' />
+          <button onClick = {() => {submit()}} type='submit'>Login</button>
         </form>
       </div>
     </div>
