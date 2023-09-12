@@ -20,19 +20,20 @@ function Login() {
 
   return (
     <div className='main-container'>
-      <div className='header'>
-        <img src='./redilogo.png' alt='Redi Logo' className='logo' />
-        <p className='typewriter'>Hello! Welcome to Redi, your interview helper.</p>
-      </div>
-      
-      <div className='login-form'>
-        <form>
-          <label htmlFor='username'>Username</label>
-          <input onChange = {(e) => {setUsername(e.target.value)}} type='text' id='username' name='username' />
-          <label htmlFor='password'>Password</label>
-          <input onChange={(e) => {setPassword(e.target.value)}} type='password' id='password' name='password' />
-          <button onClick = {() => {submit()}} type='submit'>Login</button>
-        </form>
+      <div className='contents'>
+        <div className='header'>
+          <img src='./redilogo.png' alt='Redi Logo' className='logo' />
+          <p className='typewriter'>Hello! Welcome to Redi, your interview helper.</p>
+        </div>
+        
+        <div className='login-form'>
+          <form onSubmit={(e) => {e.preventDefault()}}>
+            <input placeholder = 'Email' onChange = {(e) => {setUsername(e.target.value)}} type='text' id='username' name='username' />
+            <input placeholder = 'Password' onChange={(e) => {setPassword(e.target.value)}} type='password' id='password' name='password' />
+            <a href='/Home' className='forgot-password'>Forgot Password?</a>
+            <button onClick = {() => {submit()}} type='submit'>Login</button>
+          </form>
+        </div>
       </div>
     </div>
   )
