@@ -1,16 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono:wght@200&display=swap');
 
-body {
-  background: linear-gradient(90deg, #9999FF, #FF99FF);
-}
 
-.main-container {
+.main_container {
   margin-top: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(90deg, #9999FF, #FF99FF);
 
   display: inline-block; /* This ensures the gradient encompasses the content. */
   padding: 12px; /* Adjust this value to change the border width */
@@ -26,7 +24,7 @@ body {
   border-radius: 15px;
 }
 
-div {
+.div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,7 +63,7 @@ div {
   50% { border-color: transparent }
 }
 
-form {
+.form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,21 +72,17 @@ form {
   font-size: 20px;
 }
 
-.forgot-password {
+.forgot_password {
   font-size: 13px;
 }
 
-label {
-  margin: 5px;
-}
-
-input {
+.input {
   border-radius: 10px;
   margin: 10px;
   padding: 10px;
 }
 
-button {
+.login_button {
   padding: 10px;
   padding-inline: 20px;
   background-color: white;

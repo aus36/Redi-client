@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom/client'
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Login from './pages/Login.tsx'
 import Home from './pages/Home.tsx';
+import Landing from './pages/Landing.tsx';
 
 // create provider for routing
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Landing />} />
+        <Route path="/Login" element={<Login />} />
         <Route path="/Home" element={<Home />} />
       </Routes>
     </BrowserRouter>
